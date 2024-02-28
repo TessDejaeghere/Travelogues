@@ -94,8 +94,7 @@ Rule_based_ABSA.ipynb for aspect extraction and sentiment analysis.
 ### Machine learning-based ABSA
 
 1. ML_based_ABSA_aspects.ipynb (aspect extraction).
-2. ML_based_ABSA_feature_extraction.ipynb (extracting MacBERT and BERT embeddings as features).
-3. ML_based_ABSA_sentiment.ipynb (train classifiers using the feature embeddings to conduct sentiment analysis).
+2. ML_based_ABSA_feature_extraction_classification.ipynb (extracting MacBERT and BERT embeddings as features and use the embeddings in a set of classifiers).
 
 ### Generative LLM-based ABSA
 Prompt-based workflow based on the [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) model. 
