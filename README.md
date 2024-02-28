@@ -61,7 +61,8 @@ The German Travelogues Project dataset can be gathered from their [GitHub reposi
 ## Annotations
 
 We created an annotated dataset comprising texts in English, Dutch, German and French which were annotated for biodiversity-related aspects and their associated sentiment. 
-The aspects annotated are further detailed in the **annotation_guide.PDF**. Sentiments are on a 1 (very negative) to 5 (very positive)-point scale. Sentiment was also annotated on the level of the sentence.
+The [annotated dataset](https://drive.google.com/file/d/1ebv8IeBg4fmuEcVnKrp3GqhCy2-wLp3F/view?usp=sharing) is published on our Drive.
+The aspects annotated are further detailed in the **annotation_guide.PDF**. Sentiment-bearing words are annotated on a 1 (very negative) to 5 (very positive)-point scale. Sentiment was also annotated on the level of the sentence.
 The .ZIP-file **_Annotations.zip_** contains the annotated files in UIMA CAS XMI (XML 1.1), and can easily be parsed using the [Inceptalytics API](https://github.com/catalpa-cl/inceptalytics).
 
 The following aspects were considered: 
