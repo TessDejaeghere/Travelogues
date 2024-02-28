@@ -89,19 +89,19 @@ Sentiment analysis is evaluated on the gold standard annotations.
 
 ### Rule-based ABSA
 
-Rule_based_ABSA.ipnyb for aspect extraction and sentiment analysis.
+Rule_based_ABSA.ipynb for aspect extraction and sentiment analysis.
 
 ### Machine learning-based ABSA
 
-1. ML_based_ABSA_aspects.ipnyb (aspect extraction).
-2. ML_based_ABSA_feature_extraction.ipnyb (extracting MacBERT and BERT embeddings as features).
-3. ML_based_ABSA_sentiment.ipnyb (train classifiers using the feature embeddings to conduct sentiment analysis).
+1. ML_based_ABSA_aspects.ipynb (aspect extraction).
+2. ML_based_ABSA_feature_extraction.ipynb (extracting MacBERT and BERT embeddings as features).
+3. ML_based_ABSA_sentiment.ipynb (train classifiers using the feature embeddings to conduct sentiment analysis).
 
 ### Generative LLM-based ABSA
 Prompt-based workflow based on the [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1) model. 
 Perform aspect extraction and sentiment analysis respectively.
 
-GENLLM_based_ABSA.ipnyb 
+GENLLM_based_ABSA.ipynb 
 
 ### Scraping texts from the Biodiversity Heritage Library API
 Code to scrape the BHL website based on keywords.
