@@ -1,6 +1,6 @@
 # Travelogues
 
-This README details the **Metadata**, **Data**, **Annotations and annotation guide** and the **Notebooks** created for the methodological research on travelogues in the framework of the Computational Literary Studies project.
+This README details the **Metadata**, **Data**, **Annotations and annotation guide** and the **Notebooks** created for the methodological research on travelogues.
 We evaluated different methodologies to apply aspect-based sentiment analysis to this literary-historical dataset. 
 
 ## Metadata 
