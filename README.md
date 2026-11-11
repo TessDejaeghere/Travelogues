@@ -91,6 +91,8 @@ Sentiment analysis is evaluated on the gold standard annotations.
 
 Rule_based_ABSA.ipynb for aspect extraction and sentiment analysis.
 
+**Correction (2026).** The published version mapped the mean SenticNet score (range -1 to 1) onto 0-1 with a sigmoid before cutting it into the five labels at 0.2 / 0.4 / 0.6 / 0.8. A sigmoid maps [-1, 1] onto roughly [0.27, 0.73], so labels 1 and 5 could never be predicted. The notebook now rescales the score linearly, (x + 1) / 2. See the note above the evaluation cells in the notebook for the recomputed scores.
+
 ### Machine learning-based ABSA
 
 1. ML_based_ABSA_aspects.ipynb (aspect extraction).
@@ -106,3 +108,13 @@ GENLLM_based_ABSA.ipynb
 Code to scrape the BHL website based on keywords.
 
 Scraping_BHL.ipnyb 
+
+## Corrections after publication
+
+The paper (LT4HALA 2024) was re-examined for Tess Dejaeghere's PhD thesis. The following errors were found; the thesis reports the corrected numbers.
+
+* **Rule-based sentiment mapping** (`Rule_based_ABSA.ipynb`): the sigmoid mapping made labels 1 and 5 unreachable; fixed in the notebook (see above). Published: macro F1 0.19, weighted F1 0.32 (1-5 scale). Corrected: macro F1 0.23, weighted F1 0.33 (1-5) and macro F1 0.42, weighted F1 0.48 (1-3).
+* **Mixtral 3-class evaluation** (`GENLLM_based_ABSA.ipynb`): gold labels and predictions were collapsed to three classes with different mappings (gold {1} / {2, 3} / {4, 5}, predictions {1, 2} / {3} / {4, 5}). With one shared mapping ({1, 2} / 3 / {4, 5}) the macro F1 is 0.56 instead of the published 0.42.
+* **Reported metrics**: the paper's sentiment table gave weighted F1 for the rule-based system and macro F1 for Mixtral in one column.
+* **Machine-learning sentiment** (`ML_based_ABSA_feature_extraction_classification.ipynb`): the BERT/MacBERTh embeddings were extracted from the pre-trained models; they were not fine-tuned, although the paper says they were.
+* **API keys**: the notebooks now read the Hugging Face token (`HF_TOKEN`) and the BHL API key (`BHL_API_KEY`) from environment variables.
